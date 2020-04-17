@@ -1,0 +1,23 @@
+{
+  "name": "note-taker-app",
+  "version": "1.0.0",
+  "description": "Full stack application that allows user to create, view, and deltete notes.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwilliamsIII/note-taker-app.git"
+  },
+  "author": "rwilliamsIII",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rwilliamsIII/note-taker-app/issues"
+  },
+  "homepage": "https://github.com/rwilliamsIII/note-taker-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
