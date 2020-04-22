@@ -18,7 +18,7 @@ app.get("/notes", function(req, res){
     res.sendFile(path.join(__dirname, "public", "notes.html"));
 });
 
-app.get("api/notes", function(req, res){
+app.get("/api/notes", function(req, res){
     readFileAsync("./db/db.json", "utf8")
     .then (data => {
         let notesJSON = JSON.parse(data)
@@ -26,9 +26,20 @@ app.get("api/notes", function(req, res){
     })
 });
 
-app.post("/api/notes", function (req, res){
-    
-})
+app.post("/api/notes", function(req, res){
+    let newNote = req.body
+    let id = uuid.v4()
+    newNote.id = id
+    readFileAsync("./db/db.json", "utf8")
+    .then (data => {
+        let notesJSON = JSON.parse(data);
+        notesJSON.push(newNote);
+        writeFileAsync("./db/db.json", JSON.stringify(notesJSON))
+        .then(() => {
+            res.json(newNote);
+        });
+    });
+});
 
 
 
