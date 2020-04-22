@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/rwilliamsIII/note-taker-app#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "util": "^0.12.2",
+    "uuid": "^7.0.3"
   }
 }
