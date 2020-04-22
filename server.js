@@ -41,7 +41,17 @@ app.post("/api/notes", function(req, res){
     });
 });
 
-
+app.delete("/api/notes/:id", function (req, res){
+    readFileAsync("./db/db.json", "utf8")
+    .then (data => {
+        let notesJSON = JSON.parse(data);
+        let remainingNotes = notesJSON.filter(note => note.id !== req.params.id);
+        notesJSON = remainingNotes;
+        writeFileAsync("./db/db.json", JSON.stringify(notesJSON)).then(() => {
+            res.json(notesJSON);
+        });
+    });
+});
 
 
 
