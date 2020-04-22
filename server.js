@@ -1,8 +1,16 @@
 const express = require("express");
 const path = require("path");
+const fs = require("fs");
+const util = require("util");
+const uuid = require("uuid");
+
+const readFileAsync = util.promisify(fs.readFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+const notes = require("./db/db.json");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -16,6 +24,10 @@ app.get("/", function(req, res){
 app.get("/notes", function(req, res){
     res.sendFile(path.join(__dirname, "public", "notes.html"));
 });
+
+app.get("api/notes", function(req, res){
+    res.json(notes);
+})
 
 
 
