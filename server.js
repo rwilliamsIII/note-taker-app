@@ -10,23 +10,24 @@ const writeFileAsync = util.promisify(fs.writeFile);
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const notes = require("./db/db.json");
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-
-
-app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "public", "index.html"));
-});
+app.use(espress.static("public"));
 
 app.get("/notes", function(req, res){
     res.sendFile(path.join(__dirname, "public", "notes.html"));
 });
 
 app.get("api/notes", function(req, res){
-    res.json(notes);
+    readFileAsync("./db/db.json", "utf8")
+    .then (data => {
+        let notesJSON = JSON.parse(data)
+        res.json(notesJSON)
+    })
+});
+
+app.post("/api/notes", function (req, res){
+    
 })
 
 
