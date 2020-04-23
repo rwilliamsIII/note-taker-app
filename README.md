@@ -5,7 +5,7 @@
 # ReadME generator
 
 ## <h2 id="#description">Project Description</h2>
-Generates a team html page template based on user input.
+Full-Stack application that allows a user to create, read, and delete notes. Application uses express and heroku for deployment.
 
 ## Table of Contents
 
