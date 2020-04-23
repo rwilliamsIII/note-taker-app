@@ -20,7 +20,7 @@ Full-Stack application that allows a user to create, read, and delete notes. App
 Users can use the application by going to:  https://fathomless-beyond-25345.herokuapp.com/ or by cloning the repo and running it on a local machine. To run the application locally: Clone the repo from GitHUB, once cloned open up the terminal and type in "node server.js" to start the server, after the server is running type "localhost:5000" in to the browser of your choice to pull up the application.
 
 ## <h2 id="example">Application Example</h2>
-<img src="assets/application-example.gif">
+<img src="public/assets/images/application-example.gif">
     
 ## <h2 id="technology">Technologies Used</h2>
 ES6,Node.JS,GitHUB,Heroku,UTIL,UUID
