@@ -17,7 +17,7 @@ Full-Stack application that allows a user to create, read, and delete notes. App
 * <a href="#contact">Contact</a>
 
 ## <h2 id="installation">Installation</h2>
-Clone the repo on to your local machine and run an "npm install" in the terminal to download necessary modules. Once the install is complete, open up the terminal and type "node app.js" to begin the team creation. You will be prompted with a choice between adding an employee and finishing the team, select add employee to begin inputting team member info. Once you have added all of your team members select "Finish Team" to get the team info to write to the "team.html" page. 
+Users can use the application by going to:  https://fathomless-beyond-25345.herokuapp.com/ or by cloning the repo and running it on a local machine. To run the application locally: Clone the repo from GitHUB, once cloned open up the terminal and type in "node server.js" to start the server, after the server is running type "localhost:5000" in to the browser of your choice to pull up the application.
 
 ## <h2 id="example">Application Example</h2>
 <img src="assets/application-example.gif">
